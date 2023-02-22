@@ -1,0 +1,22 @@
+{
+  "name": "node-rpsls.js",
+  "version": "1.0.0",
+  "description": "a03 ",
+  "main": "./lib/rpsls.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a03-handonna.git"
+  },
+  "keywords": [
+    "a03"
+  ],
+  "author": "handonna",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a03-handonna/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a03-handonna#readme"
+}
