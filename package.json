@@ -12,6 +12,10 @@
   },
   "keywords": [
     "a03"
+  "bin": {
+   "node-rps": "./bin/rps-cli.js",
+   "node-rpsls": "./bin/rpsls-cli.js"
+  },
   ],
   "author": "handonna",
   "license": "GPL-3.0-or-later",
@@ -19,4 +23,6 @@
     "url": "https://github.com/comp426-2023-spring/a03-handonna/issues"
   },
   "homepage": "https://github.com/comp426-2023-spring/a03-handonna#readme"
+}
+ "type": "module"
 }
