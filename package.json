@@ -12,6 +12,10 @@
   },
   "keywords": [
     "a03"
+  "bin": {
+   "node-rps": "./bin/rps-cli.js",
+   "node-rpsls": "./bin/rpsls-cli.js"
+  },
   ],
   "author": "handonna",
   "license": "GPL-3.0-or-later",
@@ -29,4 +33,6 @@
     "lib": "lib"
   },
   "devDependencies": {}
+}
+ "type": "module"
 }
