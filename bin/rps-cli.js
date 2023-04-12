@@ -3,9 +3,7 @@
 import minimist from 'minimist';
 import { rps } from "../lib/rpsls.js";
 
-var argv = minimist(process.argv.slice(2))
-
-function printHelp() {
+function Helpfunc() {
     console.log(`Usage: node-rps [SHOT]
     Play Rock Paper Scissors (RPS)
     
@@ -19,7 +17,7 @@ function printHelp() {
                       e.g {"player":"rock","opponent":"scissors","result":"win"}`)
 }
 
-function printRules() {
+function Rulesfunc() {
     console.log(`Rules for Rock Paper Scissors:
     - Scissors CUTS Paper
     - Paper COVERS Rock
@@ -28,23 +26,23 @@ function printRules() {
 
 
 
-if (argv.h !== undefined || argv.help !== undefined) {
-    printHelp()
+if (minimist(process.argv.slice(2)).h !== undefined || minimist(process.argv.slice(2)).help !== undefined) {
+    Helpfunc()
     process.exit(0)
 }
 
 
-if (argv.r !== undefined || argv.rules !== undefined) {
-    printRules()
+if (minimist(process.argv.slice(2)).r !== undefined || minimist(process.argv.slice(2)).rules !== undefined) {
+    Rulesfunc()
     process.exit(0)
 }
 
 try {
-    let result = rps((argv._)[0])
+    let result = rps((minimist(process.argv.slice(2))._)[0])
     console.log(JSON.stringify(result))
     process.exit(0)
 } catch (e) {
-    printHelp()
-    printRules()
+    Helpfunc()
+    Rulesfunc()
     process.exit(1)
 }
