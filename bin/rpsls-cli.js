@@ -3,9 +3,7 @@
 import minimist from 'minimist';
 import { rpsls } from "../lib/rpsls.js";
 
-var argv = minimist(process.argv.slice(2))
-
-function printHelp() {
+function Helpfunc() {
     console.log(`Usage: node-rpsls [SHOT]
     Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
     
@@ -19,7 +17,7 @@ function printHelp() {
                         e.g {"player":"rock","opponent":"Spock","result":"lose"}`)
 }
 
-function printRules() {
+function Rulesfunc() {
     console.log(`Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
     - Scissors CUTS Paper
     - Paper COVERS Rock
@@ -35,22 +33,22 @@ function printRules() {
 
 
 
-if (argv.h|| argv.help) {
-    printHelp()
+if (minimist(process.argv.slice(2)).h|| argv.help) {
+    Helpfunc()
     process.exit(0)
 }
 
-if (argv.r|| argv.rules) {
-    printRules()
+if (minimist(process.argv.slice(2)).r|| minimist(process.argv.slice(2)).rules) {
+    Rulesfunc()
     process.exit(0)
 }
 
 try {
-    let result = rpsls((argv._)[0])
+    let result = rpsls((minimist(process.argv.slice(2))._)[0])
     console.log(JSON.stringify(result))
     process.exit(0)
 } catch (e) {
-    printHelp()
-    printRules()
+    Helpfunc()
+    Rulesfunc()
     process.exit(1)
 }
