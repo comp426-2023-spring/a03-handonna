@@ -3,7 +3,7 @@
 import { rps } from '../lib/rpsls.js';
 import minimist from 'minimist';
 
-function help() {
+function gethelp() {
     console.log('Usage: node-rps [SHOT]');
     console.log('Play Rock Paper Scissors (RPS)');
     console.log('');
@@ -17,7 +17,7 @@ function help() {
     console.log('\t\t  e.g {"player":"rock","opponent":"scissors","result":"win"}');
 }
 
-function rules() {
+function getrules() {
     console.log('Rules for Rock Paper Scissors:');
     console.log('');
     console.log('  - Scissors CUTS Paper');
@@ -27,10 +27,10 @@ function rules() {
 
 const args = minimist(process.argv.slice(2));
 if (args.h || args.help) {
-    help();
+    gethelp();
 }
 else if (args.r || args.rules) {
-    rules();
+    getrules();
 }
 else {
     let output = rps(args._[0])
@@ -39,7 +39,7 @@ else {
     }
     else {
         console.error(`${args._[0]} is out of range.`);
-        help();
-        rules();
+        gethelp();
+        getrules();
     } 
 }
