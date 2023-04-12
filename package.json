@@ -1,5 +1,5 @@
 {
-  "name": "node-rpsls.js",
+  "name": "node-rpsls",
   "version": "1.0.0",
   "description": "a03 ",
   "main": "./lib/rpsls.js",
@@ -18,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/comp426-2023-spring/a03-handonna/issues"
   },
-  "homepage": "https://github.com/comp426-2023-spring/a03-handonna#readme"
+  "homepage": "https://github.com/comp426-2023-spring/a03-handonna#readme",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  },
+  "bin": {
+    "node-rpsls": "bin/rps-cli.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
 }
